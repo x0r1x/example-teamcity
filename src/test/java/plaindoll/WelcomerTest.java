@@ -18,9 +18,14 @@ public class WelcomerTest {
 		assertThat(welcomer.sayFarewell(), containsString("Farewell"));
 	}
 	@Test
+	public void welcomerSaysStop() {
+		assertThat(welcomer.sayStop(), containsString("Stay"));
+	}
+	@Test
 	public void welcomerSaysHunter() {
 		assertThat(welcomer.sayWelcome(), containsString("hunter"));
 		assertThat(welcomer.sayFarewell(), containsString("hunter"));
+		assertThat(welcomer.sayStop(), containsString("hunter"));
 	}
 	@Test
 	public void welcomerSaysSilver(){
